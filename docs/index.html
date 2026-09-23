@@ -23,51 +23,54 @@
   </header>
 
   <main>
-    <section id="top" class="hero">
-      <div class="eyebrow">A transportation management system for freight brokers</div>
-      <h1>Run the whole brokerage on one system, set up the way you work.</h1>
-      <p class="hero-lede">Loads, carriers, customers, tracking and money in one place — on screens that are easy to read and configured to your operation, not to a template. Build your own reports, set your own roles and commissions, and get answers from the assistant without leaving the page.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-accent">Book a demo</a>
-        <a href="platform.html" class="btn btn-outline">See the platform</a>
-      </div>
+    <section class="page-hero">
+      <div class="kicker">The platform</div>
+      <h1>A TMS that takes on more of the work every release.</h1>
+      <p>ROIN runs the load from booking to settlement, and puts the system to work on the jobs brokers still do by hand: reading paperwork, pricing lanes, finding trucks and choosing carriers.</p>
     </section>
 
-    <section class="board-section" aria-label="Load board example">
-      <div class="board">
-        <div class="board-head">
-          <span class="board-title">Load board</span>
-          <span class="board-note">Your columns, your filters, where you left them</span>
+    <section id="direction" class="block">
+      <h2 class="h2-sm" style="max-width:24ch">The system does the busywork</h2>
+      <div class="dir-grid">
+        <div class="dir-card">
+          <span class="dir-num">01</span>
+          <h3>Rate intelligence</h3>
+          <p>Every rate you have quoted and paid becomes history you can use. See what a lane has cost over time and what a load should be getting before you quote it.</p>
+          <div class="dir-points">
+            <span>— Lane rate history, charted</span>
+            <span>— Suggested buy and sell rate per load</span>
+            <span>— Margin tracked against the market you actually run</span>
+          </div>
         </div>
-        <div class="board-row">
-          <span class="board-id">53318</span>
-          <span class="board-lane">Laredo, TX → Memphis, TN</span>
-          <span class="board-carrier">Vantage Line</span>
-          <span class="board-status">In transit</span>
+        <div class="dir-card">
+          <span class="dir-num">02</span>
+          <h3>Document intake</h3>
+          <p>Upload a rate confirmation, BOL or carrier invoice. ROIN reads it and fills it in against the right load, so the paperwork stops being a data-entry job.</p>
+          <div class="dir-points">
+            <span>— Reads rate cons, BOLs and invoices</span>
+            <span>— Matches the document to the load</span>
+            <span>— Flags what it could not read for a person to check</span>
+          </div>
         </div>
-        <div class="board-row">
-          <span class="board-id">53317</span>
-          <span class="board-lane">Fontana, CA → Phoenix, AZ</span>
-          <span class="board-carrier">Cross Haul</span>
-          <span class="board-status">Delivered</span>
+        <div class="dir-card">
+          <span class="dir-num">03</span>
+          <h3>Capacity posting</h3>
+          <p>Post the trucks you have, by area or against a specific load, so coverage starts before the phone calls do.</p>
+          <div class="dir-points">
+            <span>— Post capacity by region</span>
+            <span>— Post against a single load</span>
+            <span>— Visible from the board</span>
+          </div>
         </div>
-        <div class="board-row">
-          <span class="board-id">53314</span>
-          <span class="board-lane">Chicago, IL → Columbus, OH</span>
-          <span class="board-carrier">Redstone Frt</span>
-          <span class="board-status">Assigned</span>
-        </div>
-        <div class="board-row">
-          <span class="board-id">53311</span>
-          <span class="board-lane">Dallas, TX → Little Rock, AR</span>
-          <span class="board-carrier">—</span>
-          <span class="board-status">Needs carrier</span>
-        </div>
-        <div class="board-row">
-          <span class="board-id">53309</span>
-          <span class="board-lane">Savannah, GA → Charlotte, NC</span>
-          <span class="board-carrier">Bell Transport</span>
-          <span class="board-status">Invoiced</span>
+        <div class="dir-card">
+          <span class="dir-num">04</span>
+          <h3>Carrier matching</h3>
+          <p>Rank the carriers most likely to take a load well, based on the lanes and loads they have already run for you.</p>
+          <div class="dir-points">
+            <span>— Ranked by your own history</span>
+            <span>— Authority checked before assignment</span>
+            <span>— One click from the load</span>
+          </div>
         </div>
       </div>
     </section>
@@ -119,34 +122,43 @@
       </div>
     </section>
 
-    <section id="roadmap" class="busywork">
-      <h2 class="section-title">The system does the busywork.</h2>
-      <div class="busywork-grid">
-        <div class="busywork-card">
-          <h3>Document intake</h3>
-          <p>Upload a rate confirmation, a BOL or an invoice and have it read and entered against the right load automatically.</p>
-        </div>
-        <div class="busywork-card">
-          <h3>Rate intelligence</h3>
-          <p>Tracks what lanes have paid over time, charts the history and surfaces the rate a load should be getting.</p>
-        </div>
-        <div class="busywork-card">
-          <h3>Capacity posting</h3>
-          <p>Post the trucks you have — by area or against a specific load — so coverage starts before the phone calls do.</p>
-        </div>
-        <div class="busywork-card">
-          <h3>Carrier matching</h3>
-          <p>Ranks the carriers most likely to take a load well, based on the lanes and the loads they have already run for you.</p>
-        </div>
-      </div>
-    </section>
-
     <section id="contact" class="contact">
-      <h2>See it on your own loads.</h2>
-      <div class="contact-body">
+      <div class="contact-intro">
+        <h2>See it on your own loads.</h2>
         <p>Bring a week of your freight and the report your current system can't produce. Thirty minutes, no deck.</p>
-        <a href="mailto:hello@roin.co" class="btn btn-accent">Book a demo</a>
       </div>
+      <form class="demo-form" action="https://formsubmit.co/cory@roininc.net" method="POST">
+        <input type="hidden" name="_subject" value="New demo request from roininc.net">
+        <input type="hidden" name="_next" value="https://www.roininc.net/thanks.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="field-row">
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span>Company</span>
+            <input type="text" name="company" autocomplete="organization">
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label class="field">
+            <span>Phone <em>(optional)</em></span>
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+        </div>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="4" placeholder="Tell us a little about your brokerage and what you'd like to see."></textarea>
+        </label>
+        <button type="submit" class="btn btn-accent">Book a demo</button>
+      </form>
     </section>
   </main>
 

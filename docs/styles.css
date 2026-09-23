@@ -643,3 +643,45 @@ p { margin: 0; text-wrap: pretty; }
   .stage { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
   .dark-band { padding: 44px 22px 48px; }
 }
+
+/* ---------- Demo request form ---------- */
+
+.contact { align-items: start; }
+.contact-intro p { margin-top: 20px; font-size: 17px; line-height: 1.65; color: var(--body); max-width: 44ch; }
+.demo-form {
+  background: var(--card);
+  border: 1px solid rgba(25, 22, 18, 0.07);
+  border-radius: 18px;
+  padding: 28px 26px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.field-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field span { font-size: 13.5px; color: var(--body); }
+.field em { font-style: normal; color: var(--muted); }
+.field input, .field textarea {
+  font: inherit;
+  font-size: 16px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid rgba(25, 22, 18, 0.14);
+  border-radius: 10px;
+  padding: 12px 14px;
+  width: 100%;
+}
+.field textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+.field input:focus, .field textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+.demo-form .btn { align-self: flex-start; border: 0; cursor: pointer; font-family: inherit; margin-top: 4px; padding: 15px 30px; }
+.honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+/* Thank-you page */
+.thanks { padding: 120px 0 140px; max-width: 640px; }
+.thanks h1 { font-size: clamp(38px, 5vw, 60px); line-height: 1.08; font-weight: 300; }
+.thanks p { margin-top: 22px; font-size: 18px; line-height: 1.6; color: var(--body); }
+.thanks .btn { margin-top: 34px; }
+
+@media (max-width: 640px) {
+  .demo-form { padding: 22px 18px 24px; }
+}
