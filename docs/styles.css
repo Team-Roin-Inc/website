@@ -1,0 +1,338 @@
+/* ROIN marketing site — warm paper, serif display, terracotta accent. */
+
+:root {
+  --paper: #F0EEE6;
+  --ink: #191612;
+  --body: #4A443C;
+  --muted: #6B6357;
+  --accent: #B44A28;
+  --accent-soft: #E08A62;
+  --card: #FFFFFF;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration: none; }
+a:hover { color: var(--accent); }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.015em;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+@keyframes roinBlink {
+  0%, 60% { opacity: 1; }
+  80%, 100% { opacity: 0.25; }
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 15px 28px;
+  border-radius: 999px;
+  font-size: 16px;
+}
+.btn-accent { background: var(--accent); color: #FFFFFF; }
+.btn-accent:hover { background: var(--ink); color: #FFFFFF; }
+.btn-outline { border: 1px solid rgba(25, 22, 18, 0.2); }
+.btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+
+/* Header */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 26px 0;
+}
+.logo {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 0.06em;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 14.5px;
+  flex-wrap: wrap;
+}
+.nav-cta {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+.nav-cta:hover { background: var(--accent); color: var(--paper); }
+
+/* Hero */
+
+.hero { padding: 88px 0 64px; max-width: 940px; }
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  margin-bottom: 26px;
+}
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.06;
+  font-weight: 300;
+}
+.hero-lede {
+  margin-top: 28px;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 60ch;
+  color: var(--body);
+}
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 38px;
+}
+
+/* Load board panel */
+
+.board-section { padding-bottom: 96px; }
+.board {
+  background: var(--card);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(25, 22, 18, 0.07);
+}
+.board-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 26px;
+  border-bottom: 1px solid rgba(25, 22, 18, 0.07);
+}
+.board-title { font-size: 14px; font-weight: 500; }
+.board-note { font-size: 13px; color: var(--muted); }
+.board-row {
+  display: grid;
+  grid-template-columns: 84px minmax(0, 1fr) 120px 110px;
+  gap: 18px;
+  align-items: center;
+  padding: 17px 26px;
+  border-bottom: 1px solid rgba(25, 22, 18, 0.05);
+}
+.board-id { font-size: 14px; color: var(--muted); }
+.board-lane { font-size: 15px; }
+.board-carrier { font-size: 14px; color: var(--body); }
+.board-status { font-size: 13.5px; color: var(--accent); text-align: right; }
+
+/* Shared section headings */
+
+.section-title {
+  font-size: clamp(28px, 3.6vw, 42px);
+  line-height: 1.12;
+}
+
+/* Set up around your shop */
+
+.yours {
+  padding-top: 64px;
+  padding-bottom: 96px;
+  border-top: 1px solid rgba(25, 22, 18, 0.12);
+}
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 48px;
+  align-items: start;
+}
+.yours .section-title { max-width: 18ch; }
+.yours-intro {
+  margin-top: 20px;
+  font-size: 17.5px;
+  line-height: 1.65;
+  color: var(--body);
+}
+.config-list { display: grid; gap: 24px; }
+.config-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(25, 22, 18, 0.14);
+}
+.config-item h3 { font-size: 19px; }
+.config-item p { font-size: 15.5px; line-height: 1.6; color: var(--body); }
+
+/* Assistant band */
+
+.assistant {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 22px;
+  padding: 68px 52px 72px;
+  margin-bottom: 96px;
+}
+.assistant .two-col { gap: 52px; align-items: center; }
+.assistant-eyebrow {
+  font-size: 13.5px;
+  color: var(--accent-soft);
+  margin-bottom: 20px;
+}
+.assistant .section-title { max-width: 16ch; }
+.assistant-copy {
+  margin-top: 20px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: rgba(240, 238, 230, 0.82);
+}
+.assistant-link {
+  display: inline-block;
+  margin-top: 26px;
+  color: var(--accent-soft);
+  font-size: 16px;
+  border-bottom: 1px solid rgba(224, 138, 98, 0.4);
+}
+.assistant-link:hover { color: var(--accent-soft); border-color: var(--accent-soft); }
+
+.chat {
+  background: rgba(240, 238, 230, 0.06);
+  border: 1px solid rgba(240, 238, 230, 0.14);
+  border-radius: 16px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.chat-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 13px;
+  color: rgba(240, 238, 230, 0.6);
+}
+.chat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  animation: roinBlink 1.6s infinite;
+}
+.bubble { padding: 13px 16px; font-size: 15px; line-height: 1.55; }
+.bubble-user {
+  align-self: flex-end;
+  max-width: 82%;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 14px 14px 4px 14px;
+}
+.bubble-bot {
+  align-self: flex-start;
+  max-width: 90%;
+  background: rgba(240, 238, 230, 0.1);
+  border-radius: 14px 14px 14px 4px;
+}
+
+/* The system does the busywork */
+
+.busywork { padding-bottom: 96px; }
+.busywork .section-title { max-width: 20ch; }
+.busywork-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin-top: 44px;
+}
+.busywork-card {
+  background: var(--paper);
+  border: 1px solid rgba(25, 22, 18, 0.14);
+  padding: 30px 26px 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.busywork-card h3 { font-size: 20px; line-height: 1.25; }
+.busywork-card p { font-size: 15.5px; line-height: 1.62; color: var(--body); }
+
+/* Contact */
+
+.contact {
+  border-top: 1px solid rgba(25, 22, 18, 0.12);
+  padding: 76px 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+  align-items: end;
+}
+.contact h2 {
+  font-size: clamp(32px, 4.4vw, 52px);
+  line-height: 1.1;
+  max-width: 16ch;
+}
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.contact-body p { font-size: 17px; line-height: 1.65; color: var(--body); }
+.contact-body .btn { padding: 15px 30px; }
+
+/* Footer */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 32px 0 48px;
+  font-size: 14px;
+  color: var(--muted);
+  border-top: 1px solid rgba(25, 22, 18, 0.08);
+  margin-top: 44px;
+}
+
+/* Phones: keep the page inside the screen */
+
+@media (max-width: 640px) {
+  .wrap { padding: 0 16px; }
+  .hero { padding: 56px 0 48px; }
+  .hero-lede { font-size: 18px; }
+  .board-head { padding: 16px 18px; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .board-row {
+    grid-template-columns: 52px minmax(0, 1fr) auto;
+    gap: 12px;
+    padding: 15px 18px;
+  }
+  .board-carrier { display: none; }
+  .two-col { grid-template-columns: minmax(0, 1fr); }
+  .assistant { padding: 48px 22px 52px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-dot { animation: none; }
+}
