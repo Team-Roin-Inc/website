@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ROIN — Transportation management for freight brokers</title>
+<meta name="description" content="Run the whole brokerage on one system, set up the way you work. Loads, carriers, customers, tracking and money in one place.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site-header">
+    <a href="#top" class="logo">ROIN</a>
+    <nav class="site-nav">
+      <a href="platform.html">Platform</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="nav-cta">Book a demo</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top" class="hero">
+      <div class="eyebrow">A transportation management system for freight brokers</div>
+      <h1>Run the whole brokerage on one system, set up the way you work.</h1>
+      <p class="hero-lede">Loads, carriers, customers, tracking and money in one place — on screens that are easy to read and configured to your operation, not to a template. Build your own reports, set your own roles and commissions, and get answers from the assistant without leaving the page.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-accent">Book a demo</a>
+        <a href="platform.html" class="btn btn-outline">See the platform</a>
+      </div>
+    </section>
+
+    <section class="board-section" aria-label="Load board example">
+      <div class="board">
+        <div class="board-head">
+          <span class="board-title">Load board</span>
+          <span class="board-note">Your columns, your filters, where you left them</span>
+        </div>
+        <div class="board-row">
+          <span class="board-id">53318</span>
+          <span class="board-lane">Laredo, TX → Memphis, TN</span>
+          <span class="board-carrier">Vantage Line</span>
+          <span class="board-status">In transit</span>
+        </div>
+        <div class="board-row">
+          <span class="board-id">53317</span>
+          <span class="board-lane">Fontana, CA → Phoenix, AZ</span>
+          <span class="board-carrier">Cross Haul</span>
+          <span class="board-status">Delivered</span>
+        </div>
+        <div class="board-row">
+          <span class="board-id">53314</span>
+          <span class="board-lane">Chicago, IL → Columbus, OH</span>
+          <span class="board-carrier">Redstone Frt</span>
+          <span class="board-status">Assigned</span>
+        </div>
+        <div class="board-row">
+          <span class="board-id">53311</span>
+          <span class="board-lane">Dallas, TX → Little Rock, AR</span>
+          <span class="board-carrier">—</span>
+          <span class="board-status">Needs carrier</span>
+        </div>
+        <div class="board-row">
+          <span class="board-id">53309</span>
+          <span class="board-lane">Savannah, GA → Charlotte, NC</span>
+          <span class="board-carrier">Bell Transport</span>
+          <span class="board-status">Invoiced</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="yours" class="yours">
+      <div class="two-col">
+        <div>
+          <h2 class="section-title">Set up around your shop.</h2>
+          <p class="yours-intro">Most systems make you adopt someone else's process. ROIN is configured to yours — who sees what, who gets paid what, and what the screen shows when you open it.</p>
+        </div>
+        <div class="config-list">
+          <div class="config-item">
+            <h3>Roles and permissions</h3>
+            <p>Decide who can see rates, who can edit a load and who can touch the money, down to the user.</p>
+          </div>
+          <div class="config-item">
+            <h3>Commission tracking</h3>
+            <p>Set each rep's structure once and let settled loads calculate what they are owed.</p>
+          </div>
+          <div class="config-item">
+            <h3>Notifications you choose</h3>
+            <p>Pick the events worth interrupting you for and where they land. No blanket firehose.</p>
+          </div>
+          <div class="config-item">
+            <h3>In-app messaging</h3>
+            <p>Talk to the rest of the team on the load you are both looking at, instead of in a separate thread nobody can find later.</p>
+          </div>
+          <div class="config-item">
+            <h3>System administration</h3>
+            <p>Users, settings and defaults are yours to manage, not a support request.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="assistant" class="assistant">
+      <div class="two-col">
+        <div>
+          <div class="assistant-eyebrow">And an assistant on every page</div>
+          <h2 class="section-title">Ask instead of hunting.</h2>
+          <p class="assistant-copy">It knows which screen you are on and which load you have open. It reads ROIN's own source code before it answers, so you get something specific rather than a help article — usually inside a minute. Report a bug and it becomes a tracked ticket with a fix the same day.</p>
+          <a href="assistant.html" class="assistant-link">How the assistant works →</a>
+        </div>
+        <div class="chat" aria-label="Example assistant conversation">
+          <div class="chat-status"><span class="chat-dot"></span>Reading the code</div>
+          <div class="bubble bubble-user">The rate on load 53318 isn't showing on AR aging.</div>
+          <div class="bubble bubble-bot">The load settled after the report's window closed, so it dropped out of the aging view. I've filed it — a fix is in review and I'll message you here when it's live.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="busywork">
+      <h2 class="section-title">The system does the busywork.</h2>
+      <div class="busywork-grid">
+        <div class="busywork-card">
+          <h3>Document intake</h3>
+          <p>Upload a rate confirmation, a BOL or an invoice and have it read and entered against the right load automatically.</p>
+        </div>
+        <div class="busywork-card">
+          <h3>Rate intelligence</h3>
+          <p>Tracks what lanes have paid over time, charts the history and surfaces the rate a load should be getting.</p>
+        </div>
+        <div class="busywork-card">
+          <h3>Capacity posting</h3>
+          <p>Post the trucks you have — by area or against a specific load — so coverage starts before the phone calls do.</p>
+        </div>
+        <div class="busywork-card">
+          <h3>Carrier matching</h3>
+          <p>Ranks the carriers most likely to take a load well, based on the lanes and the loads they have already run for you.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>See it on your own loads.</h2>
+      <div class="contact-body">
+        <p>Bring a week of your freight and the report your current system can't produce. Thirty minutes, no deck.</p>
+        <a href="mailto:hello@roin.co" class="btn btn-accent">Book a demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>ROIN Inc.</span>
+    <span>hello@roin.co</span>
+  </footer>
+
+</div>
+</body>
+</html>
