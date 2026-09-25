@@ -773,3 +773,5 @@ p { margin: 0; text-wrap: pretty; }
   .shot-list .shot-row span { display: none; }
   .shot-list .shot-row strong { flex: 1; }
 }
+.footer-email { color: var(--muted); }
+.footer-email:hover { color: var(--accent); }
