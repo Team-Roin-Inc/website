@@ -349,6 +349,12 @@ p { margin: 0; text-wrap: pretty; }
 .site-nav a.current { color: var(--accent); }
 
 .page-hero { padding: 80px 0 64px; max-width: 820px; }
+.page-hero p.hero-proof {
+  margin-top: 16px;
+  font-size: 15.5px;
+  color: var(--accent);
+  max-width: none;
+}
 .page-hero.narrow { max-width: 780px; }
 .kicker {
   font-size: 12.5px;
