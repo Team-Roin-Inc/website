@@ -278,44 +278,6 @@ p { margin: 0; text-wrap: pretty; }
 .busywork-card h3 { font-size: 20px; line-height: 1.25; }
 .busywork-card p { font-size: 15.5px; line-height: 1.62; color: var(--body); }
 
-/* Proven in real use */
-
-.proof {
-  border-top: 1px solid rgba(25, 22, 18, 0.12);
-  padding: 64px 0 80px;
-}
-.proof .two-col { align-items: center; }
-.proof .section-title { max-width: 18ch; }
-.proof-copy {
-  margin-top: 20px;
-  font-size: 17.5px;
-  line-height: 1.65;
-  color: var(--body);
-  max-width: 46ch;
-}
-.proof-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  gap: 16px;
-}
-.proof-stat {
-  background: var(--card);
-  border: 1px solid rgba(25, 22, 18, 0.1);
-  border-radius: 16px;
-  padding: 28px 26px 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.proof-num {
-  font-family: var(--serif);
-  font-size: clamp(32px, 4vw, 44px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-}
-.proof-label { font-size: 15px; line-height: 1.5; color: var(--body); }
-
 /* Contact */
 
 .contact {
@@ -387,6 +349,12 @@ p { margin: 0; text-wrap: pretty; }
 .site-nav a.current { color: var(--accent); }
 
 .page-hero { padding: 80px 0 64px; max-width: 820px; }
+.page-hero p.hero-proof {
+  margin-top: 16px;
+  font-size: 15.5px;
+  color: var(--accent);
+  max-width: none;
+}
 .page-hero.narrow { max-width: 780px; }
 .kicker {
   font-size: 12.5px;
