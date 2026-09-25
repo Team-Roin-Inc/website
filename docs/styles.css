@@ -691,3 +691,85 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 640px) {
   .demo-form { padding: 22px 18px 24px; }
 }
+
+/* Mini app screenshots inside the direction cards.
+   To use a real screenshot instead, replace a <figure class="shot">…</figure> with:
+   <figure class="shot"><img src="img/your-screenshot.png" alt="What it shows"></figure> */
+.shot {
+  margin: auto 0 0;
+  border: 1px solid rgba(25, 22, 18, 0.12);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--paper);
+  font-size: 13px;
+}
+.shot img { display: block; width: 100%; height: auto; }
+.dir-points + .shot { margin-top: 18px; }
+.shot-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #E7E3D7;
+  border-bottom: 1px solid rgba(25, 22, 18, 0.1);
+}
+.shot-bar i { width: 8px; height: 8px; border-radius: 50%; background: rgba(25, 22, 18, 0.18); }
+.shot-bar span { margin-left: 8px; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shot-body { padding: 14px; background: var(--card); }
+.shot-chart { display: block; width: 100%; height: 90px; overflow: visible; }
+.shot-chart .grid { stroke: rgba(25, 22, 18, 0.08); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.shot-chart polyline { fill: none; stroke-width: 2; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.shot-chart .line-sell { stroke: var(--accent); }
+.shot-chart .line-buy { stroke: var(--ink); opacity: 0.55; }
+.shot-chart .dot-sell { fill: var(--accent); }
+.shot-chart .dot-buy { fill: var(--muted); }
+.shot-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(25, 22, 18, 0.08);
+}
+.shot-stats span { display: block; font-size: 11px; color: var(--muted); }
+.shot-stats strong { font-family: var(--serif); font-weight: 400; font-size: 18px; }
+.shot-stats .accent { color: var(--accent); }
+.shot-split { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 14px; align-items: start; }
+.shot-doc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 8px;
+  border: 1px solid rgba(25, 22, 18, 0.12);
+  border-radius: 4px;
+  background: var(--paper);
+  aspect-ratio: 8.5 / 11;
+}
+.shot-doc b { height: 6px; width: 60%; background: rgba(25, 22, 18, 0.35); border-radius: 2px; }
+.shot-doc em { height: 4px; background: rgba(25, 22, 18, 0.15); border-radius: 2px; }
+.shot-doc em.short { width: 65%; }
+.shot-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(25, 22, 18, 0.07);
+  min-width: 0;
+}
+.shot-row:last-child { border-bottom: 0; }
+.shot-row span { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shot-row strong { font-weight: 500; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.shot-fields .shot-row span { width: 52px; flex: none; }
+.shot-fields .shot-row strong { flex: 1; }
+.shot-row i { font-style: normal; font-size: 12px; width: 18px; text-align: center; }
+.shot-row i.ok { color: #3F7A4A; }
+.shot-row.flag strong, .shot-row.flag i { color: var(--accent); }
+.shot-list .shot-row strong { flex: none; }
+.shot-list .shot-row span { flex: 1; }
+.shot-list .shot-row em { font-style: normal; flex: none; padding: 3px 8px; }
+.shot-list .shot-row b { font-weight: 500; color: var(--accent); width: 12px; flex: none; }
+
+@media (max-width: 640px) {
+  .shot-list .shot-row span { display: none; }
+  .shot-list .shot-row strong { flex: 1; }
+}

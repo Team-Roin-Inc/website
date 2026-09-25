@@ -42,6 +42,26 @@
             <span>— Suggested buy and sell rate per load</span>
             <span>— Margin tracked against the market you actually run</span>
           </div>
+
+          <figure class="shot" aria-label="Example: lane rate history screen">
+            <div class="shot-bar"><i></i><i></i><i></i><span>Lane · Dallas, TX → Atlanta, GA</span></div>
+            <div class="shot-body">
+              <svg class="shot-chart" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="0" y1="22" x2="300" y2="22" class="grid"/>
+                <line x1="0" y1="52" x2="300" y2="52" class="grid"/>
+                <line x1="0" y1="82" x2="300" y2="82" class="grid"/>
+                <polyline class="line-sell" points="0,40 30,36 60,42 90,30 120,34 150,26 180,30 210,22 240,26 270,18 300,20"/>
+                <polyline class="line-buy" points="0,62 30,58 60,64 90,52 120,56 150,50 180,54 210,44 240,48 270,40 300,42"/>
+                <circle cx="300" cy="20" r="3.5" class="dot-sell"/>
+                <circle cx="300" cy="42" r="3.5" class="dot-buy"/>
+              </svg>
+              <div class="shot-stats">
+                <div><span>Suggested sell</span><strong>$2,450</strong></div>
+                <div><span>Suggested buy</span><strong>$2,080</strong></div>
+                <div><span>Margin</span><strong class="accent">15.1%</strong></div>
+              </div>
+            </div>
+          </figure>
         </div>
         <div class="dir-card">
           <span class="dir-num">02</span>
@@ -52,6 +72,21 @@
             <span>— Matches the document to the load</span>
             <span>— Flags what it could not read for a person to check</span>
           </div>
+
+          <figure class="shot" aria-label="Example: document intake screen">
+            <div class="shot-bar"><i></i><i></i><i></i><span>Rate confirmation · load 53318</span></div>
+            <div class="shot-body shot-split">
+              <div class="shot-doc" aria-hidden="true">
+                <b></b><em></em><em></em><em class="short"></em><b></b><em></em><em class="short"></em>
+              </div>
+              <div class="shot-fields">
+                <div class="shot-row"><span>Carrier</span><strong>Blue Ridge Freight</strong><i class="ok">✓</i></div>
+                <div class="shot-row"><span>Rate</span><strong>$2,080.00</strong><i class="ok">✓</i></div>
+                <div class="shot-row"><span>Pickup</span><strong>Oct 2, 08:00</strong><i class="ok">✓</i></div>
+                <div class="shot-row flag"><span>PO #</span><strong>Check</strong><i>!</i></div>
+              </div>
+            </div>
+          </figure>
         </div>
         <div class="dir-card">
           <span class="dir-num">03</span>
@@ -62,6 +97,15 @@
             <span>— Post against a single load</span>
             <span>— Visible from the board</span>
           </div>
+
+          <figure class="shot" aria-label="Example: capacity posting screen">
+            <div class="shot-bar"><i></i><i></i><i></i><span>Posted capacity</span></div>
+            <div class="shot-body shot-list">
+              <div class="shot-row"><strong>53′ Dry van</strong><span>Dallas area · Today</span><em class="chip accent">Live</em></div>
+              <div class="shot-row"><strong>48′ Flatbed</strong><span>Load 53402 · Tomorrow</span><em class="chip accent">Live</em></div>
+              <div class="shot-row"><strong>Reefer</strong><span>Memphis area · Fri</span><em class="chip">Draft</em></div>
+            </div>
+          </figure>
         </div>
         <div class="dir-card">
           <span class="dir-num">04</span>
@@ -72,6 +116,15 @@
             <span>— Authority checked before assignment</span>
             <span>— One click from the load</span>
           </div>
+
+          <figure class="shot" aria-label="Example: carrier matching screen">
+            <div class="shot-bar"><i></i><i></i><i></i><span>Best carriers · load 53318</span></div>
+            <div class="shot-body shot-list">
+              <div class="shot-row"><b>1</b><strong>Blue Ridge Freight</strong><span>14 loads on lane</span><em class="chip accent">Assign</em></div>
+              <div class="shot-row"><b>2</b><strong>Lone Star Carriers</strong><span>9 loads on lane</span><em class="chip">Assign</em></div>
+              <div class="shot-row"><b>3</b><strong>Peach State Logistics</strong><span>6 loads on lane</span><em class="chip">Assign</em></div>
+            </div>
+          </figure>
         </div>
       </div>
     </section>
