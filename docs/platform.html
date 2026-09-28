@@ -32,141 +32,144 @@
       </div>
     </section>
 
-    <section class="board-section" aria-label="Load board example">
-      <div class="kicker" style="margin-bottom:12px">Step 1 · Book</div>
-      <h2 class="h2-sm" style="max-width:26ch;margin-bottom:12px">Your whole day on one board.</h2>
-      <p class="lead" style="max-width:62ch;margin:0 0 28px">Every load you have going, with the columns and filters you picked, right where you left them. Send in the customer's tender email and ROIN builds the load from it.</p>
-      <div class="board">
-        <div class="board-head">
-          <span class="board-title">Load board</span>
-          <span class="board-note">Your columns, your filters, where you left them</span>
+    <nav class="tags" aria-label="Steps" style="margin:-24px 0 64px">
+      <a class="tag" href="#book">1 · Book</a>
+      <a class="tag" href="#cover">2 · Cover</a>
+      <a class="tag" href="#track">3 · Track</a>
+      <a class="tag" href="#paid">4 · Get paid</a>
+      <a class="tag" href="#numbers">5 · Know your numbers</a>
+    </nav>
+
+    <section id="book" class="board-section" aria-label="Book">
+      <div class="two-col">
+        <div>
+          <div class="kicker" style="margin-bottom:18px">Step 1 · Book</div>
+          <h2 class="h2-sm" style="max-width:22ch">Build the load from the paperwork, not the keyboard.</h2>
+          <p class="lead">Drop in the customer's rate confirmation, tender or email. ROIN reads it and fills in the load: customer, stops, dates, references, freight and rate. You check it and save.</p>
+          <p class="lead">Anything it isn't sure of is highlighted, and every value shows the line it came from, so checking takes a glance instead of a re-type.</p>
         </div>
-        <div class="board-row">
-          <span class="board-id">53318</span>
-          <span class="board-lane">Laredo, TX → Memphis, TN</span>
-          <span class="board-carrier">Vantage Line</span>
-          <span class="board-status">In transit</span>
+        <div class="panel">
+          <div class="panel-head"><span>Create from document · Rate confirmation</span></div>
+          <div class="panel-row"><strong>Customer</strong><span class="count">Harbor Foods ✓</span></div>
+          <div class="panel-row"><strong>Pickup</strong><span class="count">Dallas, TX · Oct 2, 08:00 ✓</span></div>
+          <div class="panel-row"><strong>Delivery</strong><span class="count">Atlanta, GA · Oct 3, 14:00 ✓</span></div>
+          <div class="panel-row"><strong>Rate</strong><span class="count">$2,450 + fuel ✓</span></div>
+          <div class="panel-row"><strong>PO #</strong><span class="count" style="color:var(--accent)">Please check</span></div>
         </div>
-        <div class="board-row">
-          <span class="board-id">53317</span>
-          <span class="board-lane">Fontana, CA → Phoenix, AZ</span>
-          <span class="board-carrier">Cross Haul</span>
-          <span class="board-status">Delivered</span>
-        </div>
-        <div class="board-row">
-          <span class="board-id">53314</span>
-          <span class="board-lane">Chicago, IL → Columbus, OH</span>
-          <span class="board-carrier">Redstone Frt</span>
-          <span class="board-status">Assigned</span>
-        </div>
-        <div class="board-row">
-          <span class="board-id">53311</span>
-          <span class="board-lane">Dallas, TX → Little Rock, AR</span>
-          <span class="board-carrier">—</span>
-          <span class="board-status">Needs carrier</span>
-        </div>
-        <div class="board-row">
-          <span class="board-id">53309</span>
-          <span class="board-lane">Savannah, GA → Charlotte, NC</span>
-          <span class="board-carrier">Bell Transport</span>
-          <span class="board-status">Invoiced</span>
-        </div>
+      </div>
+      <div class="dark-cols" style="margin-top:48px">
+        <div class="point"><h3>A suggested rate as you type</h3><p>Enter the lane and equipment and ROIN shows what you usually charge and pay on it, from your own past loads. One click fills both rates.</p></div>
+        <div class="point"><h3>Multi-stop and the details</h3><p>Up to ten pickups and ten deliveries. BOL, PO and PRO numbers, and your own list of extra charges.</p></div>
+        <div class="point"><h3>Repeat freight in seconds</h3><p>Copy a load as many times as you need, pick the status the copies start in, and keep them linked.</p></div>
+        <div class="point"><h3>Your whole day on one board</h3><p>Counts by status, what's picking up and delivering today, and saved views with the columns and filters you picked.</p></div>
       </div>
     </section>
 
-    <section class="dark-band">
+    <section id="cover" class="dark-band">
       <div class="kicker" style="margin-bottom:18px">Step 2 · Cover</div>
       <h2 class="h2-sm" style="max-width:24ch">Find the right truck and lock it in.</h2>
-      <div class="dark-cols">
+      <p class="lead" style="max-width:62ch;color:rgba(240,238,230,0.78)">ROIN puts the carriers who already run the lane next to the trucks that are open near the pickup, and tells you why each one made the list.</p>
+      <div class="dark-cols" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
         <div class="dark-col">
-          <h3>Search carriers</h3>
-          <p>Look up a carrier from inside the load and put them on it in a click. ROIN ranks the carriers who have run that lane for you before.</p>
+          <h3>Carriers ranked for the load</h3>
+          <p>Ranked by how often they've run the lane for you, whether they have a truck nearby, and how soon it's free.</p>
         </div>
         <div class="dark-col">
-          <h3>Authority checked first</h3>
-          <p>ROIN checks a carrier's operating authority before they can be put on a load, so a carrier without it never slips through.</p>
+          <h3>Open trucks, posted</h3>
+          <p>Post the trucks you know about, or email a carrier a link to post their own. ROIN matches them to loads within 150 miles.</p>
         </div>
         <div class="dark-col">
-          <h3>Send it out</h3>
-          <p>Send the load out to the carrier, then log each status as it moves. What you tell the customer and what the team sees always match.</p>
+          <h3>Insurance at a glance</h3>
+          <p>Every carrier shows whether their insurance is active, expiring in the next 45 days or expired, and whether their packet is in.</p>
+        </div>
+        <div class="dark-col">
+          <h3>Rate con signed online</h3>
+          <p>Send the rate confirmation from the load. The carrier signs it online, with a copy to your dispatcher if you like.</p>
         </div>
       </div>
     </section>
 
-    <section class="block">
+    <section id="track" class="block" style="border-top:0;padding-top:76px">
       <div class="two-col">
         <div>
           <div class="kicker" style="margin-bottom:18px">Step 3 · Track</div>
           <h2 class="h2-sm" style="max-width:20ch">Know where every load is without calling around.</h2>
-          <p class="lead">Tracking updates, check calls and paperwork land on the load as they happen, with who did what and when. Anyone on the team can open it and see where things stand.</p>
+          <p class="lead">Check calls, documents and every change land on the load as they happen, with who did what and when. Anyone on the team can open it and see where things stand.</p>
         </div>
-        <div class="stages">
-          <div class="stage"><span class="stage-name">Booked</span><span class="stage-body">Customer, lane, windows and references entered once.</span></div>
-          <div class="stage"><span class="stage-name">Covered</span><span class="stage-body">Carrier assigned, authority checked, rate confirmed.</span></div>
-          <div class="stage"><span class="stage-name">In transit</span><span class="stage-body">GPS positions and check calls logged on the load.</span></div>
-          <div class="stage"><span class="stage-name">Delivered</span><span class="stage-body">POD and documents attached to the same record.</span></div>
-          <div class="stage"><span class="stage-name">Settled</span><span class="stage-body">Invoice, carrier pay and margin closed out.</span></div>
+        <div class="points">
+          <div class="point"><h3>Check calls by text</h3><p>ROIN texts the driver for an update on a schedule you set, or when you tap "Ping driver now." The reply lands on the load.</p></div>
+          <div class="point"><h3>A tracking link for your customer</h3><p>Send one link that shows status, stops, last location, ETA and the POD once it's delivered. No prices. You can see when they open it and turn it off any time.</p></div>
+          <div class="point"><h3>PODs without the chase</h3><p>Text or email the driver a link to upload the POD straight to the load, one for each delivery stop.</p></div>
+          <div class="point"><h3>Every document in one place</h3><p>Tender, rate con, BOL, carrier invoice and POD sit on the load. Drop a file in and ROIN works out what it is and files it.</p></div>
         </div>
       </div>
     </section>
 
-
-    <section class="block plain">
+    <section id="paid" class="block">
       <div class="two-col">
         <div>
           <div class="kicker" style="margin-bottom:18px">Step 4 · Get paid</div>
           <h2 class="h2-sm" style="max-width:22ch">Close the load and the books close with it.</h2>
           <p class="lead">The customer invoice, the carrier's pay and your margin are all part of the load. When you settle it, your reports update on the spot. There is nothing to add up at the end of the month.</p>
-          <p class="lead">It all flows to QuickBooks Online, so your accountant keeps working where they already do.</p>
+          <div class="panel" style="margin-top:28px">
+            <div class="panel-head"><span>Rate breakdown · load 53318</span></div>
+            <div class="panel-row"><strong>Customer</strong><span class="count">$2,450 line haul + $310 fuel + $75 detention</span></div>
+            <div class="panel-row"><strong>Carrier</strong><span class="count">$2,080 line haul + $260 fuel</span></div>
+            <div class="panel-row"><strong>Margin</strong><span class="count" style="color:var(--accent)">$495 · 17.5%</span></div>
+          </div>
         </div>
-        <div class="panel">
-          <div class="panel-head">Reports</div>
-          <div class="panel-row">Settled loads</div>
-          <div class="panel-row">Full load report</div>
-          <div class="panel-row">AP aging</div>
-          <div class="panel-row">AR aging</div>
-          <div class="panel-row">Commission</div>
+        <div class="points">
+          <div class="point"><h3>Invoice with the POD attached</h3><p>Email the invoice and POD to your customer from the load in one step, and copy yourself on every one.</p></div>
+          <div class="point"><h3>Carrier invoices checked for you</h3><p>ROIN reads the charges off the carrier's invoice so you can check them against what you agreed before you pay.</p></div>
+          <div class="point"><h3>Payments in and out, in bulk</h3><p>Record what customers paid and what you paid carriers across many loads at once, with the history kept.</p></div>
+          <div class="point"><h3>Commissions worked out</h3><p>Set rates by rep, by customer or by freight type once. Settled loads work out what each rep is owed.</p></div>
+          <div class="point"><h3>QuickBooks Online</h3><p>Send the invoice and the carrier bill to QuickBooks from the load, so your accountant keeps working where they already do.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="block" style="padding-top:60px">
+    <section id="numbers" class="block">
       <div class="two-col">
         <div>
           <div class="kicker" style="margin-bottom:18px">Step 5 · Know your numbers</div>
-          <h2 class="h2-sm" style="max-width:22ch">Your numbers, the way you want to see them.</h2>
-          <p class="lead">Build a report from anything on a load, save it, and send it to Excel. The dashboard shows revenue, margin, loads moved and on-time pickups for today, this week and this month.</p>
+          <h2 class="h2-sm" style="max-width:22ch">Know what a lane pays before you quote it.</h2>
+          <p class="lead">The Rates tab turns every load you've run into a lane history: what you charged, what you paid and your margin, month by month for two years, with diesel prices alongside so you can see why it moved.</p>
         </div>
         <div class="panel">
-          <div class="panel-head">
-            <span>My reports</span>
-            <div class="chips"><span class="chip">Columns</span><span class="chip accent">Export</span></div>
-          </div>
-          <div class="panel-row"><strong>All Loads</strong><span class="count">1,240</span></div>
-          <div class="panel-row"><strong>Unsettled Receivables</strong><span class="count">86</span></div>
-          <div class="panel-row"><strong>Unsettled Payables</strong><span class="count">119</span></div>
-          <div class="panel-row"><strong>POD Pending</strong><span class="count">204</span></div>
-          <div class="panel-row"><strong>Invoice Received</strong><span class="count">57</span></div>
+          <div class="panel-head"><span>Rates · Dallas, TX → Atlanta, GA</span><div class="chips"><span class="chip">Dry van</span><span class="chip accent">24 months</span></div></div>
+          <div class="panel-row"><strong>Loads run</strong><span class="count">42</span></div>
+          <div class="panel-row"><strong>Average customer rate</strong><span class="count">$2,450</span></div>
+          <div class="panel-row"><strong>Average carrier rate</strong><span class="count">$2,080</span></div>
+          <div class="panel-row"><strong>Margin</strong><span class="count">15.1%</span></div>
         </div>
       </div>
+      <div class="dark-cols" style="margin-top:48px">
+        <div class="point"><h3>Ask in plain English</h3><p>Type "What was our revenue and profit in August?" and get the answer, straight from your own loads.</p></div>
+        <div class="point"><h3>A dashboard that's always current</h3><p>Revenue, profit and loads by day, loads by status, your top customers and your top lanes.</p></div>
+        <div class="point"><h3>Reports your way</h3><p>Filter, pick your columns, save the view, share it with the team and send it to Excel.</p></div>
+      </div>
       <div class="metrics">
-        <div class="metric"><span class="metric-label">Revenue</span><span class="metric-value">$412,000</span><span class="metric-delta">vs last month</span></div>
-        <div class="metric"><span class="metric-label">Margin</span><span class="metric-value">14.2%</span><span class="metric-delta">vs last month</span></div>
-        <div class="metric"><span class="metric-label">Loads moved</span><span class="metric-value">128</span><span class="metric-delta">this month</span></div>
-        <div class="metric"><span class="metric-label">On-time pickup</span><span class="metric-value">94%</span><span class="metric-delta">112 of 119 measured</span></div>
+        <div class="metric"><span class="metric-label">Revenue</span><span class="metric-value">$412,000</span><span class="metric-delta">this month</span></div>
+        <div class="metric"><span class="metric-label">Profit</span><span class="metric-value">$58,500</span><span class="metric-delta">this month</span></div>
+        <div class="metric"><span class="metric-label">Loads</span><span class="metric-value">128</span><span class="metric-delta">this month</span></div>
+        <div class="metric"><span class="metric-label">Top lane</span><span class="metric-value">DAL → ATL</span><span class="metric-delta">11 loads</span></div>
       </div>
       <p class="fineprint">Figures shown are illustrative</p>
     </section>
 
     <section class="block">
-      <h2 class="h2-sm">Works with the tools you already use</h2>
-      <div class="tags">
-        <span class="tag">QuickBooks Online</span>
-        <span class="tag">MacroPoint tracking</span>
-        <span class="tag">Carrier411</span>
-        <span class="tag">PCMiler</span>
-        <span class="tag">Text message alerts</span>
-        <span class="tag">Email notifications</span>
+      <div class="two-col">
+        <div>
+          <div class="kicker" style="margin-bottom:18px">Your team</div>
+          <h2 class="h2-sm" style="max-width:20ch">Set up around your shop.</h2>
+          <p class="lead">Who sees what, who can change what, and how the team talks, all inside the system you already have open.</p>
+        </div>
+        <div class="points">
+          <div class="point"><h3>Roles down to the user</h3><p>Decide who can see rates, who can edit a load and who can touch the money, area by area.</p></div>
+          <div class="point"><h3>Team chat built in</h3><p>Message a coworker or a group, share files, and see who's online, without leaving ROIN.</p></div>
+          <div class="point"><h3>Summaries in your inbox</h3><p>Get a regular email of unpaid customer invoices and carrier payments coming due.</p></div>
+          <div class="point"><h3>Bring your history with you</h3><p>Import your carriers, drivers, customers, locations and past loads, so day one starts with your own data.</p></div>
+        </div>
       </div>
     </section>
 
