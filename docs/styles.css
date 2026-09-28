@@ -775,3 +775,77 @@ p { margin: 0; text-wrap: pretty; }
 }
 .footer-email { color: var(--muted); }
 .footer-email:hover { color: var(--accent); }
+
+/* ---------- Platform page: three layers and the load tour ---------- */
+
+.layers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 16px;
+  margin: 0 0 96px;
+}
+.layer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 26px 26px 28px;
+  background: var(--card);
+  border: 1px solid rgba(25, 22, 18, 0.1);
+  border-radius: 16px;
+}
+.layer:hover { border-color: var(--accent); }
+.layer-num { font-size: 13px; color: var(--accent); }
+.layer h3 { font-size: 22px; line-height: 1.2; }
+.layer p { font-size: 15.5px; line-height: 1.6; color: var(--body); }
+
+.board-row .board-status.pill {
+  justify-self: end;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12.5px;
+}
+
+.tour {
+  margin-top: 40px;
+  border: 1px solid rgba(25, 22, 18, 0.14);
+  border-radius: 16px;
+  background: var(--card);
+  overflow: hidden;
+}
+.tour-head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 22px;
+  padding: 18px 26px;
+  border-bottom: 1px solid rgba(25, 22, 18, 0.1);
+  font-size: 14px;
+  color: var(--muted);
+}
+.tour-head strong { color: var(--ink); font-weight: 500; margin-right: 8px; }
+.tour-row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  gap: 24px;
+  padding: 22px 26px;
+  border-top: 1px solid rgba(25, 22, 18, 0.08);
+}
+.tour-row:first-of-type { border-top: 0; }
+.tour-tab { font-size: 14.5px; font-weight: 500; }
+.tour-body { display: flex; flex-direction: column; gap: 8px; }
+.tour-body p { font-size: 15.5px; line-height: 1.6; color: var(--body); }
+.does {
+  align-self: flex-start;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid rgba(180, 74, 40, 0.4);
+  border-radius: 3px;
+  padding: 3px 7px;
+}
+.does + p { margin-top: 2px; }
+
+@media (max-width: 640px) {
+  .tour-row { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 18px; }
+  .tour-head { padding: 16px 18px; }
+}
