@@ -355,18 +355,15 @@ p { margin: 0; text-wrap: pretty; }
   color: var(--accent);
   max-width: none;
 }
-/* Hero with the converging-lines graphic, borrowed from the app's sign-in page. */
-.brand-hero {
-  position: relative;
-  max-width: none;
-  margin-top: 24px;
-  padding: 56px 0 72px;
-  overflow: hidden;
-}
-.brand-hero > * { position: relative; }
-.brand-hero > .brand-hero-graphic { position: absolute; left: auto; right: 0; top: 0; bottom: 0; width: 46%; height: 100%; }
-.brand-hero .hl { color: var(--ink); border-bottom: 1px dashed rgba(241, 90, 41, 0.7); cursor: default; outline: none; transition: color .2s, border-color .2s; }
-.brand-hero .hl:hover, .brand-hero .hl:focus { color: #F15A29; border-bottom-color: #F15A29; }
+/* First section: a copy of the app's sign-in brand panel (black, converging lines, tagline). */
+.si-panel { position: relative; margin-top: 24px; min-height: 640px; padding: 48px; background: #000; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; font-family: "Public Sans", sans-serif; }
+.si-panel > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: 0; width: min(100%, 860px); height: 60%; overflow: visible; clip-path: inset(0 0 0 -2000px); }
+.si-logo { position: relative; display: flex; align-items: center; gap: 7px; }
+.si-logo img { width: 40px; height: 40px; display: block; }
+.si-logo span { color: #fff; font-size: 30px; font-weight: 800; letter-spacing: -.04em; line-height: 1; }
+.si-panel h1.si-tagline { position: relative; color: #fff; font-family: "Public Sans", sans-serif; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; max-width: 380px; }
+
+/* Line interaction: hovering a job in the intro text lights up its line. */
 .brand-hero-graphic .ln { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke .25s, stroke-width .25s, opacity .25s; animation: lnDraw 1.4s ease-out both; }
 .brand-hero-graphic .dt { transition: fill .25s, r .25s; }
 .brand-hero-graphic.active .ln { opacity: .35; }
@@ -374,10 +371,11 @@ p { margin: 0; text-wrap: pretty; }
 .brand-hero-graphic .dt.on { fill: #F15A29; r: 7; }
 @keyframes lnDraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .brand-hero-graphic .ln { animation: none; } }
-.brand-hero h1 { font-family: "Public Sans", sans-serif; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; font-size: clamp(34px, 4.2vw, 48px); text-wrap: balance; }
-.brand-hero h1, .page-hero.brand-hero p { max-width: min(520px, 54%); }
-.brand-hero h1 { color: var(--ink); }
-.page-hero.brand-hero p { color: var(--body); }
+
+.brand-hero { padding: 48px 0 64px; max-width: 760px; }
+.brand-hero p:first-child { margin-top: 0; }
+.brand-hero .hl { color: var(--ink); border-bottom: 1px dashed rgba(241, 90, 41, 0.7); cursor: default; outline: none; transition: color .2s, border-color .2s; }
+.brand-hero .hl:hover, .brand-hero .hl:focus { color: #F15A29; border-bottom-color: #F15A29; }
 .page-hero.brand-hero p.hero-proof { color: #F15A29; }
 .brand-hero .btn-accent { background: #F15A29; }
 .brand-hero .btn-accent:hover { background: var(--ink); color: #fff; }
@@ -670,9 +668,9 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 640px) {
   .wrap-wide { padding: 0 16px; }
   .page-hero { padding: 56px 0 48px; }
-  .brand-hero { padding: 40px 0 48px; }
-  .brand-hero h1, .page-hero.brand-hero p { max-width: none; }
-  .brand-hero > .brand-hero-graphic { position: relative; display: block; width: 100%; height: 160px; margin-bottom: 28px; }
+  .si-panel { min-height: 520px; padding: 28px; }
+  .si-panel h1.si-tagline { font-size: 32px; }
+  .brand-hero { padding: 36px 0 48px; }
   .page-hero p { font-size: 18px; }
   .dir-card { padding: 26px 22px 28px; }
   .stage { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
