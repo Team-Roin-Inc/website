@@ -25,14 +25,14 @@
   <main>
     <section class="page-hero brand-hero">
       <svg class="brand-hero-graphic" viewBox="0 0 500 380" preserveAspectRatio="xMaxYMid meet" fill="none" stroke-linecap="round" aria-hidden="true">
-        <g stroke="#3A3A3A" stroke-width="2"><path d="M-10 40C120 40 150 190 330 190"/><path d="M-10 110C110 110 160 190 330 190"/><path d="M-10 190H330"/><path d="M-10 270C110 270 160 190 330 190"/><path d="M-10 340C120 340 150 190 330 190"/></g>
+        <g stroke="#3A3A3A" stroke-width="2"><path class="ln" data-i="0" pathLength="1" d="M-10 40C120 40 150 190 330 190"/><path class="ln" data-i="1" pathLength="1" d="M-10 110C110 110 160 190 330 190"/><path class="ln" data-i="2" pathLength="1" d="M-10 190H330"/><path class="ln" data-i="3" pathLength="1" d="M-10 270C110 270 160 190 330 190"/><path class="ln" data-i="4" pathLength="1" d="M-10 340C120 340 150 190 330 190"/></g>
         <path d="M330 190H470" stroke="#F15A29" stroke-width="3"/>
         <circle cx="478" cy="190" r="9" fill="#F15A29"/>
-        <g fill="#6B7280"><circle cx="20" cy="40" r="4"/><circle cx="20" cy="110" r="4"/><circle cx="20" cy="190" r="4"/><circle cx="20" cy="270" r="4"/><circle cx="20" cy="340" r="4"/></g>
+        <g fill="#6B7280"><circle class="dt" data-i="0" cx="20" cy="40" r="4"/><circle class="dt" data-i="1" cx="20" cy="110" r="4"/><circle class="dt" data-i="2" cx="20" cy="190" r="4"/><circle class="dt" data-i="3" cx="20" cy="270" r="4"/><circle class="dt" data-i="4" cx="20" cy="340" r="4"/></g>
       </svg>
       <div class="brand-logo"><img src="roin-mark-on-dark.svg" width="40" height="40" alt=""><span>Roin</span></div>
       <h1>A TMS that does the busywork for you.</h1>
-      <p>ROIN runs the load from booking to settlement, and puts the system to work on the jobs brokers still do by hand: reading paperwork, pricing lanes, finding trucks and choosing carriers.</p>
+      <p>ROIN runs the load from <span class="hl" data-i="2" tabindex="0">booking to settlement</span>, and puts the system to work on the jobs brokers still do by hand: reading <span class="hl" data-i="0" tabindex="0">paperwork</span>, <span class="hl" data-i="1" tabindex="0">pricing lanes</span>, finding <span class="hl" data-i="3" tabindex="0">trucks</span> and choosing <span class="hl" data-i="4" tabindex="0">carriers</span>.</p>
       <p class="hero-proof">In daily use at a paying freight brokerage, with 37,000+ loads run through it so far.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-accent">Book a demo</a>
@@ -263,5 +263,25 @@
   </footer>
 
 </div>
+<script>
+(function () {
+  var hero = document.querySelector('.brand-hero');
+  if (!hero) return;
+  var svg = hero.querySelector('.brand-hero-graphic');
+  function set(i) {
+    svg.querySelectorAll('[data-i]').forEach(function (el) {
+      el.classList.toggle('on', i !== null && el.getAttribute('data-i') === i);
+    });
+    svg.classList.toggle('active', i !== null);
+  }
+  hero.querySelectorAll('.hl').forEach(function (w) {
+    var i = w.getAttribute('data-i');
+    w.addEventListener('mouseenter', function () { set(i); });
+    w.addEventListener('focus', function () { set(i); });
+    w.addEventListener('mouseleave', function () { set(null); });
+    w.addEventListener('blur', function () { set(null); });
+  });
+})();
+</script>
 </body>
 </html>
