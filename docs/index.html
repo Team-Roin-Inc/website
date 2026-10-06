@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Sans:wght@400;500&family=Public+Sans:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261006-10">
+<link rel="stylesheet" href="styles.css?v=20261006-11">
 </head>
 <body>
 <div class="wrap">
@@ -33,13 +33,6 @@
       <h1 class="si-tagline">AI-driven logistics, without the manual work.</h1>
     </section>
 
-    <section class="page-hero brand-hero">
-      <p>ROIN runs the load from <span class="hl" data-i="2" tabindex="0">booking to settlement</span>, and puts the system to work on the jobs brokers still do by hand: reading <span class="hl" data-i="0" tabindex="0">paperwork</span>, <span class="hl" data-i="1" tabindex="0">pricing lanes</span>, finding <span class="hl" data-i="3" tabindex="0">trucks</span> and choosing <span class="hl" data-i="4" tabindex="0">carriers</span>.</p>
-      <p class="hero-proof">In daily use at a paying freight brokerage, with 37,000+ loads run through it so far.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-accent">Book a demo</a>
-      </div>
-    </section>
 
     <section id="problem" class="block">
       <div class="two-col">
@@ -265,25 +258,5 @@
   </footer>
 
 </div>
-<script>
-(function () {
-  var hero = document.querySelector('.brand-hero');
-  var svg = document.querySelector('.si-panel .brand-hero-graphic');
-  if (!hero || !svg) return;
-  function set(i) {
-    svg.querySelectorAll('[data-i]').forEach(function (el) {
-      el.classList.toggle('on', i !== null && el.getAttribute('data-i') === i);
-    });
-    svg.classList.toggle('active', i !== null);
-  }
-  hero.querySelectorAll('.hl').forEach(function (w) {
-    var i = w.getAttribute('data-i');
-    w.addEventListener('mouseenter', function () { set(i); });
-    w.addEventListener('focus', function () { set(i); });
-    w.addEventListener('mouseleave', function () { set(null); });
-    w.addEventListener('blur', function () { set(null); });
-  });
-})();
-</script>
 </body>
 </html>
