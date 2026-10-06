@@ -363,8 +363,9 @@ p { margin: 0; text-wrap: pretty; }
   max-width: none;
 }
 /* First section: a copy of the app's sign-in brand panel (black, converging lines, tagline). */
-.si-panel { position: relative; margin: 0 calc(50% - 50vw); min-height: 520px; padding: 48px calc(50vw - 50%); background: #000; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; font-family: "Public Sans", sans-serif; }
-.si-panel > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: 0; width: min(100%, 860px); height: 384px; overflow: visible; clip-path: inset(0 0 0 -2000px); }
+/* --below: extra black under the headline so the band reaches the bottom of the window (611px = 91px header + 520px panel). */
+.si-panel { --below: max(0px, calc(100vh - 611px)); position: relative; margin: 0 calc(50% - 50vw); min-height: calc(520px + var(--below)); padding: 48px calc(50vw - 50%) calc(48px + var(--below)); background: #000; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; font-family: "Public Sans", sans-serif; }
+.si-panel > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: var(--below); width: min(100%, 860px); height: 384px; overflow: visible; clip-path: inset(0 0 0 -2000px); }
 .si-panel h1.si-tagline { position: relative; margin-top: auto; color: #fff; font-family: "Public Sans", sans-serif; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; max-width: 380px; }
 
 /* Line interaction: hovering a job in the intro text lights up its line. */
@@ -672,7 +673,7 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 640px) {
   .wrap-wide { padding: 0 16px; }
   .page-hero { padding: 56px 0 48px; }
-  .si-panel { min-height: 520px; padding: 28px calc(50vw - 50%); }
+  .si-panel { --below: 0px; min-height: 520px; padding: 28px calc(50vw - 50%); }
   .si-panel > .brand-hero-graphic { height: 60%; }
   .si-panel h1.si-tagline { font-size: 32px; }
   .brand-hero { padding: 36px 0 48px; }
