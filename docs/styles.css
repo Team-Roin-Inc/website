@@ -364,7 +364,7 @@ p { margin: 0; text-wrap: pretty; }
 }
 /* First section: a copy of the app's sign-in brand panel (black, converging lines, tagline). */
 .si-panel { position: relative; margin: 0 calc(50% - 50vw); min-height: 640px; padding: 48px calc(50vw - 50%); background: #000; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; font-family: "Public Sans", sans-serif; }
-.si-panel > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: 0; width: min(100%, 860px); height: 60%; overflow: visible; clip-path: inset(0 0 0 -2000px); }
+.si-panel > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: 0; width: min(100%, 860px); height: 60%; overflow: visible; clip-path: inset(-2000px 0 0 -2000px); }
 .si-panel h1.si-tagline { position: relative; margin-top: auto; color: #fff; font-family: "Public Sans", sans-serif; font-size: 38px; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; max-width: 380px; }
 
 /* Line interaction: hovering a job in the intro text lights up its line. */
