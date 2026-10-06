@@ -355,6 +355,24 @@ p { margin: 0; text-wrap: pretty; }
   color: var(--accent);
   max-width: none;
 }
+/* Black brand panel with the converging-lines graphic, borrowed from the app's sign-in page. */
+.brand-hero {
+  position: relative;
+  max-width: none;
+  margin-top: 24px;
+  padding: 72px 56px 80px;
+  background: #000;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.brand-hero > * { position: relative; }
+.brand-hero > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: 0; width: 46%; height: 100%; }
+.brand-hero h1, .page-hero.brand-hero p { max-width: 470px; }
+.brand-hero h1 { color: #fff; }
+.page-hero.brand-hero p { color: #D6D3CC; }
+.page-hero.brand-hero p.hero-proof { color: #F15A29; }
+.brand-hero .btn-accent { background: #F15A29; }
+.brand-hero .btn-accent:hover { background: #fff; color: #000; }
 .page-hero.narrow { max-width: 780px; }
 .kicker {
   font-size: 12.5px;
@@ -644,6 +662,8 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 640px) {
   .wrap-wide { padding: 0 16px; }
   .page-hero { padding: 56px 0 48px; }
+  .brand-hero { padding: 44px 24px 56px; border-radius: 18px; }
+  .brand-hero > .brand-hero-graphic { width: 100%; opacity: 0.35; }
   .page-hero p { font-size: 18px; }
   .dir-card { padding: 26px 22px 28px; }
   .stage { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
