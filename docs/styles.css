@@ -355,19 +355,17 @@ p { margin: 0; text-wrap: pretty; }
   color: var(--accent);
   max-width: none;
 }
-/* Black brand panel with the converging-lines graphic, borrowed from the app's sign-in page. */
+/* Hero with the converging-lines graphic, borrowed from the app's sign-in page. */
 .brand-hero {
   position: relative;
   max-width: none;
   margin-top: 24px;
-  padding: 72px 56px 80px;
-  background: #000;
-  border-radius: 24px;
+  padding: 56px 0 72px;
   overflow: hidden;
 }
 .brand-hero > * { position: relative; }
 .brand-hero > .brand-hero-graphic { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; }
-.brand-hero .hl { color: #fff; border-bottom: 1px dashed rgba(241, 90, 41, 0.7); cursor: default; outline: none; transition: color .2s, border-color .2s; }
+.brand-hero .hl { color: var(--ink); border-bottom: 1px dashed rgba(241, 90, 41, 0.7); cursor: default; outline: none; transition: color .2s, border-color .2s; }
 .brand-hero .hl:hover, .brand-hero .hl:focus { color: #F15A29; border-bottom-color: #F15A29; }
 .brand-hero-graphic .ln { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke .25s, stroke-width .25s, opacity .25s; animation: lnDraw 1.4s ease-out both; }
 .brand-hero-graphic .dt { transition: fill .25s, r .25s; }
@@ -376,17 +374,14 @@ p { margin: 0; text-wrap: pretty; }
 .brand-hero-graphic .dt.on { fill: #F15A29; r: 7; }
 @keyframes lnDraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @media (prefers-reduced-motion: reduce) { .brand-hero-graphic .ln { animation: none; } }
-.brand-logo { display: flex; align-items: center; gap: 7px; margin-bottom: 56px; }
-.brand-logo img { width: 40px; height: 40px; display: block; }
-.brand-logo span { color: #fff; font-family: "Public Sans", sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -.04em; line-height: 1; }
 .brand-hero h1 { font-family: "Public Sans", sans-serif; font-weight: 800; letter-spacing: -.03em; line-height: 1.1; font-size: clamp(34px, 4.2vw, 48px); text-wrap: balance; }
 .brand-hero h1, .page-hero.brand-hero p { max-width: 560px; }
-.brand-hero h1, .brand-hero p { text-shadow: 0 0 14px #000, 0 0 4px #000; }
-.brand-hero h1 { color: #fff; }
-.page-hero.brand-hero p { color: #D6D3CC; }
+.brand-hero h1, .brand-hero p { text-shadow: 0 0 12px var(--paper), 0 0 4px var(--paper); }
+.brand-hero h1 { color: var(--ink); }
+.page-hero.brand-hero p { color: var(--body); }
 .page-hero.brand-hero p.hero-proof { color: #F15A29; }
 .brand-hero .btn-accent { background: #F15A29; }
-.brand-hero .btn-accent:hover { background: #fff; color: #000; }
+.brand-hero .btn-accent:hover { background: var(--ink); color: #fff; }
 .page-hero.narrow { max-width: 780px; }
 .kicker {
   font-size: 12.5px;
@@ -676,7 +671,7 @@ p { margin: 0; text-wrap: pretty; }
 @media (max-width: 640px) {
   .wrap-wide { padding: 0 16px; }
   .page-hero { padding: 56px 0 48px; }
-  .brand-hero { padding: 44px 24px 56px; border-radius: 18px; }
+  .brand-hero { padding: 40px 0 48px; }
   .brand-hero > .brand-hero-graphic { width: 100%; opacity: 0.35; }
   .page-hero p { font-size: 18px; }
   .dir-card { padding: 26px 22px 28px; }
