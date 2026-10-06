@@ -367,6 +367,15 @@ p { margin: 0; text-wrap: pretty; }
 }
 .brand-hero > * { position: relative; }
 .brand-hero > .brand-hero-graphic { position: absolute; left: auto; right: 0; bottom: 0; width: 46%; height: 100%; }
+.brand-hero .hl { color: #fff; border-bottom: 1px dashed rgba(241, 90, 41, 0.7); cursor: default; outline: none; transition: color .2s, border-color .2s; }
+.brand-hero .hl:hover, .brand-hero .hl:focus { color: #F15A29; border-bottom-color: #F15A29; }
+.brand-hero-graphic .ln { stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke .25s, stroke-width .25s, opacity .25s; animation: lnDraw 1.4s ease-out both; }
+.brand-hero-graphic .dt { transition: fill .25s, r .25s; }
+.brand-hero-graphic.active .ln { opacity: .35; }
+.brand-hero-graphic .ln.on { stroke: #F15A29; stroke-width: 3.5; opacity: 1; }
+.brand-hero-graphic .dt.on { fill: #F15A29; r: 7; }
+@keyframes lnDraw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .brand-hero-graphic .ln { animation: none; } }
 .brand-logo { display: flex; align-items: center; gap: 7px; margin-bottom: 56px; }
 .brand-logo img { width: 40px; height: 40px; display: block; }
 .brand-logo span { color: #fff; font-family: "Public Sans", sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -.04em; line-height: 1; }
