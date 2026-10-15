@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Sans:wght@400;500&family=Public+Sans:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261006-12">
+<link rel="stylesheet" href="styles.css?v=20261015-1">
 </head>
 <body>
 <div class="wrap">
@@ -51,18 +51,25 @@
 
     <section id="direction" class="block">
       <h2 class="h2-sm" style="max-width:24ch">ROIN takes those jobs off your plate.</h2>
-      <div class="dir-grid">
-        <div class="dir-card">
-          <span class="dir-num">01</span>
-          <h3>Rate intelligence</h3>
-          <p>See what a lane has paid before you quote it.</p>
-          <div class="dir-points">
-            <span>— Lane history, charted</span>
-            <span>— Suggested buy and sell per load</span>
-            <span>— Margin against your own market</span>
-          </div>
+      <div class="jobs" data-jobs>
+        <div class="job-tabs" role="tablist" aria-label="Jobs ROIN takes on">
+          <button type="button" class="job-tab is-active" role="tab" id="job-tab-0" aria-controls="job-0" aria-selected="true"><span class="dir-num">01</span><span class="job-tab-name">Rate intelligence</span></button>
+          <button type="button" class="job-tab" role="tab" id="job-tab-1" aria-controls="job-1" aria-selected="false" tabindex="-1"><span class="dir-num">02</span><span class="job-tab-name">Document intake</span></button>
+          <button type="button" class="job-tab" role="tab" id="job-tab-2" aria-controls="job-2" aria-selected="false" tabindex="-1"><span class="dir-num">03</span><span class="job-tab-name">Carrier matching</span></button>
+        </div>
 
-          <figure class="shot" aria-label="Example: lane rate history screen">
+        <div class="job-panel" role="tabpanel" id="job-0" aria-labelledby="job-tab-0">
+          <div class="job-copy">
+            <span class="dir-num">01</span>
+            <h3>Rate intelligence</h3>
+            <p>See what a lane has paid before you quote it.</p>
+            <div class="dir-points">
+              <span>— Lane history, charted</span>
+              <span>— Suggested buy and sell per load</span>
+              <span>— Margin against your own market</span>
+            </div>
+          </div>
+          <figure class="shot anim-rate" aria-label="Example: lane rate history screen">
             <div class="shot-bar"><i></i><i></i><i></i><span>Lane · Dallas, TX → Atlanta, GA</span></div>
             <div class="shot-body">
               <svg class="shot-chart" viewBox="0 0 300 90" preserveAspectRatio="none" aria-hidden="true">
@@ -82,20 +89,23 @@
             </div>
           </figure>
         </div>
-        <div class="dir-card">
-          <span class="dir-num">02</span>
-          <h3>Document intake</h3>
-          <p>Upload a rate con, BOL or invoice. ROIN fills it in against the load.</p>
-          <div class="dir-points">
-            <span>— Reads rate cons, BOLs, invoices</span>
-            <span>— Matches the document to the load</span>
-            <span>— Flags anything it could not read</span>
-          </div>
 
-          <figure class="shot" aria-label="Example: document intake screen">
+        <div class="job-panel" role="tabpanel" id="job-1" aria-labelledby="job-tab-1" hidden>
+          <div class="job-copy">
+            <span class="dir-num">02</span>
+            <h3>Document intake</h3>
+            <p>Upload a rate con, BOL or invoice. ROIN fills it in against the load.</p>
+            <div class="dir-points">
+              <span>— Reads rate cons, BOLs, invoices</span>
+              <span>— Matches the document to the load</span>
+              <span>— Flags anything it could not read</span>
+            </div>
+          </div>
+          <figure class="shot anim-intake" aria-label="Example: document intake screen">
             <div class="shot-bar"><i></i><i></i><i></i><span>Rate confirmation · load 53318</span></div>
             <div class="shot-body shot-split">
               <div class="shot-doc" aria-hidden="true">
+                <span class="scan"></span>
                 <b></b><em></em><em></em><em class="short"></em><b></b><em></em><em class="short"></em>
               </div>
               <div class="shot-fields">
@@ -107,35 +117,18 @@
             </div>
           </figure>
         </div>
-        <div class="dir-card">
-          <span class="dir-num">03</span>
-          <h3>Capacity posting</h3>
-          <p>Post the trucks you have, so coverage starts before the calls do.</p>
-          <div class="dir-points">
-            <span>— Post capacity by region</span>
-            <span>— Post against a single load</span>
-            <span>— Visible from the board</span>
-          </div>
 
-          <figure class="shot" aria-label="Example: capacity posting screen">
-            <div class="shot-bar"><i></i><i></i><i></i><span>Posted capacity</span></div>
-            <div class="shot-body shot-list">
-              <div class="shot-row"><strong>53′ Dry van</strong><span>Dallas area · Today</span><em class="chip accent">Live</em></div>
-              <div class="shot-row"><strong>48′ Flatbed</strong><span>Load 53402 · Tomorrow</span><em class="chip accent">Live</em></div>
-              <div class="shot-row"><strong>Reefer</strong><span>Memphis area · Fri</span><em class="chip">Draft</em></div>
+        <div class="job-panel" role="tabpanel" id="job-2" aria-labelledby="job-tab-2" hidden>
+          <div class="job-copy">
+            <span class="dir-num">03</span>
+            <h3>Carrier matching</h3>
+            <p>Rank carriers by the lanes they have already run for you.</p>
+            <div class="dir-points">
+              <span>— Ranked by your own history</span>
+              <span>— Authority checked first</span>
+              <span>— One click from the load</span>
             </div>
-          </figure>
-        </div>
-        <div class="dir-card">
-          <span class="dir-num">04</span>
-          <h3>Carrier matching</h3>
-          <p>Rank carriers by the lanes they have already run for you.</p>
-          <div class="dir-points">
-            <span>— Ranked by your own history</span>
-            <span>— Authority checked first</span>
-            <span>— One click from the load</span>
           </div>
-
           <figure class="shot" aria-label="Example: carrier matching screen">
             <div class="shot-bar"><i></i><i></i><i></i><span>Best carriers · load 53318</span></div>
             <div class="shot-body shot-list">
@@ -145,6 +138,29 @@
             </div>
           </figure>
         </div>
+      </div>
+    </section>
+
+    <section id="capacity" class="block">
+      <div class="job-panel">
+        <div class="job-copy">
+          <span class="dir-num">Also on the board</span>
+          <h3 class="job-title-sm">Capacity posting</h3>
+          <p>Post the trucks you have, so coverage starts before the calls do.</p>
+          <div class="dir-points">
+            <span>— Post capacity by region</span>
+            <span>— Post against a single load</span>
+            <span>— Visible from the board</span>
+          </div>
+        </div>
+        <figure class="shot" aria-label="Example: capacity posting screen">
+          <div class="shot-bar"><i></i><i></i><i></i><span>Posted capacity</span></div>
+          <div class="shot-body shot-list">
+            <div class="shot-row"><strong>53′ Dry van</strong><span>Dallas area · Today</span><em class="chip accent">Live</em></div>
+            <div class="shot-row"><strong>48′ Flatbed</strong><span>Load 53402 · Tomorrow</span><em class="chip accent">Live</em></div>
+            <div class="shot-row"><strong>Reefer</strong><span>Memphis area · Fri</span><em class="chip">Draft</em></div>
+          </div>
+        </figure>
       </div>
     </section>
 
@@ -241,5 +257,6 @@
   </footer>
 
 </div>
+<script src="jobs.js?v=20261015-1" defer></script>
 </body>
 </html>
