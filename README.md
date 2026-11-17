@@ -2,7 +2,8 @@
 
 The public marketing site for ROIN, served by GitHub Pages at **www.roininc.net**.
 
-- `docs/index.html`: the homepage
+- `docs/index.html`: the homepage (the whole site; `platform.html` and `assistant.html` just forward here)
+- `docs/thanks.html`: shown after someone sends the demo form
 - `docs/styles.css`: all styling (colors and fonts are at the top)
 - `docs/CNAME`: the custom domain
 
