@@ -188,6 +188,9 @@ p { margin: 0; text-wrap: pretty; }
   font-size: 16px;
   border-bottom: 1px solid rgba(224, 138, 98, 0.4);
 }
+.assistant-facts { margin-top: 24px; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 15px; color: rgba(240, 238, 230, 0.72); }
+.assistant-facts li { padding-left: 20px; position: relative; }
+.assistant-facts li::before { content: "—"; position: absolute; left: 0; color: var(--accent-soft); }
 .assistant-link:hover { color: var(--accent-soft); border-color: var(--accent-soft); }
 
 .chat {

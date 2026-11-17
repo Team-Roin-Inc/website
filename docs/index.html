@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ROIN — AI-driven logistics, without the manual work</title>
-<meta name="description" content="Run the whole brokerage on one system, set up the way you work. Loads, carriers, customers, tracking and money in one place.">
+<meta name="description" content="A TMS for freight brokers, proven in a working brokerage. Loads, documents, AR/AP and reports in one system. Now taking on a few more brokerages to build it with.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&family=IBM+Plex+Sans:wght@400;500&family=Public+Sans:wght@800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261117-1">
+<link rel="stylesheet" href="styles.css?v=20261117-3">
 </head>
 <body>
 <div class="wrap">
@@ -33,28 +33,30 @@
     </section>
 
 
-    <section id="problem" class="block">
+    <section id="today" class="block">
       <div class="two-col">
         <div>
-          <h2 class="h2-sm" style="max-width:20ch">Every load comes with a pile of busywork.</h2>
-          <p class="lead">Most of a broker's day goes to the chores around the freight.</p>
+          <div class="kicker">Built for freight brokers</div>
+          <h2 class="h2-sm" style="max-width:20ch">One system that runs the whole brokerage.</h2>
+          <p class="lead">Built and proven inside a working brokerage, running real freight every day.</p>
         </div>
         <div class="stages">
-          <div class="stage"><span class="stage-name">Paperwork</span><span class="stage-body">Typing rate confirmations in by hand.</span></div>
-          <div class="stage"><span class="stage-name">Pricing</span><span class="stage-body">Looking up what a lane paid last time.</span></div>
-          <div class="stage"><span class="stage-name">Trucks</span><span class="stage-body">Calling around for a truck near the pickup.</span></div>
-          <div class="stage"><span class="stage-name">Carriers</span><span class="stage-body">Picking a carrier from memory.</span></div>
+          <div class="stage"><span class="stage-name">Loads</span><span class="stage-body">Booking to delivery on one record, with carriers and tracking.</span></div>
+          <div class="stage"><span class="stage-name">Documents</span><span class="stage-body">Rate cons, BOLs and PODs stored on the load they belong to.</span></div>
+          <div class="stage"><span class="stage-name">AR and AP</span><span class="stage-body">Customer invoices, carrier pay and aging, synced to QuickBooks.</span></div>
+          <div class="stage"><span class="stage-name">Reports</span><span class="stage-body">Build your own from any field on a load and export to Excel.</span></div>
         </div>
       </div>
     </section>
 
     <section id="direction" class="block">
-      <h2 class="h2-sm" style="max-width:24ch">ROIN takes those jobs off your plate.</h2>
+      <h2 class="h2-sm" style="max-width:24ch">And it does the busywork for you.</h2>
       <div class="jobs" data-jobs>
         <div class="job-tabs" role="tablist" aria-label="Jobs ROIN takes on">
           <button type="button" class="job-tab is-active" role="tab" id="job-tab-0" aria-controls="job-0" aria-selected="true"><span class="dir-num">01</span><span class="job-tab-name">Rate intelligence</span></button>
           <button type="button" class="job-tab" role="tab" id="job-tab-1" aria-controls="job-1" aria-selected="false" tabindex="-1"><span class="dir-num">02</span><span class="job-tab-name">Document intake</span></button>
           <button type="button" class="job-tab" role="tab" id="job-tab-2" aria-controls="job-2" aria-selected="false" tabindex="-1"><span class="dir-num">03</span><span class="job-tab-name">Carrier matching</span></button>
+          <button type="button" class="job-tab" role="tab" id="job-tab-3" aria-controls="job-3" aria-selected="false" tabindex="-1"><span class="dir-num">04</span><span class="job-tab-name">Capacity posting</span></button>
         </div>
 
         <div class="job-panel" role="tabpanel" id="job-0" aria-labelledby="job-tab-0">
@@ -137,74 +139,47 @@
             </div>
           </figure>
         </div>
-      </div>
-    </section>
 
-    <section id="capacity" class="block">
-      <div class="job-panel">
-        <div class="job-copy">
-          <span class="dir-num">Also on the board</span>
-          <h3 class="job-title-sm">Capacity posting</h3>
-          <p>Post the trucks you have, so coverage starts before the calls do.</p>
-          <div class="dir-points">
-            <span>— Post capacity by region</span>
-            <span>— Post against a single load</span>
-            <span>— Visible from the board</span>
+        <div class="job-panel" role="tabpanel" id="job-3" aria-labelledby="job-tab-3" hidden>
+          <div class="job-copy">
+            <span class="dir-num">04</span>
+            <h3>Capacity posting</h3>
+            <p>Post the trucks you have, so coverage starts before the calls do.</p>
+            <div class="dir-points">
+              <span>— Post capacity by region</span>
+              <span>— Post against a single load</span>
+              <span>— Visible from the board</span>
+            </div>
           </div>
+          <figure class="shot" aria-label="Example: capacity posting screen">
+            <div class="shot-bar"><i></i><i></i><i></i><span>Posted capacity</span></div>
+            <div class="shot-body shot-list">
+              <div class="shot-row"><strong>53′ Dry van</strong><span>Dallas area · Today</span><em class="chip accent">Live</em></div>
+              <div class="shot-row"><strong>48′ Flatbed</strong><span>Load 53402 · Tomorrow</span><em class="chip accent">Live</em></div>
+              <div class="shot-row"><strong>Reefer</strong><span>Memphis area · Fri</span><em class="chip">Draft</em></div>
+            </div>
+          </figure>
         </div>
-        <figure class="shot" aria-label="Example: capacity posting screen">
-          <div class="shot-bar"><i></i><i></i><i></i><span>Posted capacity</span></div>
-          <div class="shot-body shot-list">
-            <div class="shot-row"><strong>53′ Dry van</strong><span>Dallas area · Today</span><em class="chip accent">Live</em></div>
-            <div class="shot-row"><strong>48′ Flatbed</strong><span>Load 53402 · Tomorrow</span><em class="chip accent">Live</em></div>
-            <div class="shot-row"><strong>Reefer</strong><span>Memphis area · Fri</span><em class="chip">Draft</em></div>
-          </div>
-        </figure>
       </div>
     </section>
 
-    <section id="yours" class="yours">
+    <section id="grow" class="assistant">
       <div class="two-col">
         <div>
-          <h2 class="section-title">Set up around your shop.</h2>
-          <p class="yours-intro">Who sees what, who gets paid what, and what the screen shows.</p>
+          <div class="assistant-eyebrow">What's next</div>
+          <h2 class="section-title">Build it with us.</h2>
+          <p class="assistant-copy">ROIN is taking on a few more brokerages, and we build it alongside each one. Tell us how your shop runs and what it needs, and AI agents adapt the system to fit.</p>
+          <ul class="assistant-facts">
+            <li>Set up around your roles, commissions and process.</li>
+            <li>Ask the built-in assistant anything. It reads the code before it answers.</li>
+            <li>Your requests shape what gets built next.</li>
+            <li>A direct line to the founder. Type "get Cory" and a person picks it up.</li>
+          </ul>
         </div>
-        <div class="config-list">
-          <div class="config-item">
-            <h3>Roles and permissions</h3>
-            <p>Who can see rates, edit a load or touch the money.</p>
-          </div>
-          <div class="config-item">
-            <h3>Commission tracking</h3>
-            <p>Set each rep's structure once. Settled loads do the math.</p>
-          </div>
-          <div class="config-item">
-            <h3>Notifications you choose</h3>
-            <p>Only the events worth interrupting you for.</p>
-          </div>
-          <div class="config-item">
-            <h3>In-app messaging</h3>
-            <p>Talk to the team on the load you are both looking at.</p>
-          </div>
-          <div class="config-item">
-            <h3>System administration</h3>
-            <p>Users, settings and defaults are yours to manage.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="assistant" class="assistant">
-      <div class="two-col">
-        <div>
-          <div class="assistant-eyebrow">And an assistant on every page</div>
-          <h2 class="section-title">Ask instead of hunting.</h2>
-          <p class="assistant-copy">It knows which load you have open, so you get a straight answer in about a minute. If something is broken, tell it, and it gets fixed.</p>
-        </div>
-        <div class="chat" aria-label="Example assistant conversation">
-          <div class="chat-status"><span class="chat-dot"></span>Looking into it</div>
-          <div class="bubble bubble-user">The rate on load 53318 isn't showing on AR aging.</div>
-          <div class="bubble bubble-bot">It settled after the report's window closed, so it dropped off. I've sent it to be fixed and will message you here when it shows up.</div>
+        <div class="chat" aria-label="Example request to the assistant">
+          <div class="chat-status"><span class="chat-dot"></span>Working on it</div>
+          <div class="bubble bubble-user">Can the load board show the customer's PO number as a column?</div>
+          <div class="bubble bubble-bot">Yes. I've written it up for your account and the change is being built now. I'll message you here when it's live.</div>
         </div>
       </div>
     </section>
@@ -212,7 +187,7 @@
     <section id="contact" class="contact">
       <div class="contact-intro">
         <h2>See it on your own loads.</h2>
-        <p>Bring a week of your freight. Thirty minutes, no slides.</p>
+        <p>Bring a week of your freight and what you'd change first. Thirty minutes, no slides.</p>
       </div>
       <form class="demo-form" action="https://formsubmit.co/cory@roininc.net" method="POST">
         <input type="hidden" name="_subject" value="New demo request from roininc.net">
@@ -255,6 +230,6 @@
   </footer>
 
 </div>
-<script src="jobs.js?v=20261015-1" defer></script>
+<script src="jobs.js?v=20261117-1" defer></script>
 </body>
 </html>
