@@ -295,6 +295,13 @@ p { margin: 0; text-wrap: pretty; }
   .hero-lede { font-size: 18px; }
   .two-col { grid-template-columns: minmax(0, 1fr); }
   .assistant { padding: 48px 22px 52px; }
+  /* Keep the logo, links and button on one tidy row */
+  .site-header { gap: 12px; }
+  .site-nav { gap: 16px; font-size: 14px; flex-wrap: nowrap; }
+  .nav-cta { padding: 8px 14px; }
+}
+@media (max-width: 360px) {
+  .site-nav a[href$="#contact"]:not(.nav-cta) { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
