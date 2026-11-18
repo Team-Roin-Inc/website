@@ -873,3 +873,9 @@ p { margin: 0; text-wrap: pretty; }
 
 /* Home: "Build it with us" sits right under the opening */
 #grow { margin-top: 72px; }
+
+/* Home: "What ROIN does today", a simple two-column list */
+.today-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 0 32px; }
+.today-list li { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-top: 1px solid rgba(25, 22, 18, 0.12); }
+.today-list strong { font-family: var(--serif); font-weight: 400; font-size: 19px; color: var(--ink); }
+.today-list span { font-size: 15px; line-height: 1.5; color: var(--body); }
