@@ -870,3 +870,6 @@ p { margin: 0; text-wrap: pretty; }
 .today-card p { font-size: 15px; line-height: 1.6; color: var(--body); }
 .today-works { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 24px; font-size: 14px; color: var(--muted); }
 .today-works > span:first-child { margin-right: 6px; }
+
+/* Home: "Build it with us" sits right under the opening */
+#grow { margin-top: 72px; }
