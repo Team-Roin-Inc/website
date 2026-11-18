@@ -860,3 +860,13 @@ p { margin: 0; text-wrap: pretty; }
   .anim-rate *, .anim-intake *, .anim-intake .shot-doc, .job-bar { animation: none !important; }
   .anim-intake .shot-doc .scan { display: none; }
 }
+
+/* Home: "One system that runs the whole brokerage" */
+.today-head { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 16px 48px; align-items: end; }
+.today-head .lead { margin-top: 0; }
+.today-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px; margin-top: 40px; }
+.today-card { background: var(--card); border: 1px solid rgba(25, 22, 18, 0.1); border-radius: 14px; padding: 24px 22px 26px; display: flex; flex-direction: column; gap: 10px; }
+.today-card h3 { font-size: 20px; line-height: 1.25; }
+.today-card p { font-size: 15px; line-height: 1.6; color: var(--body); }
+.today-works { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 24px; font-size: 14px; color: var(--muted); }
+.today-works > span:first-child { margin-right: 6px; }
