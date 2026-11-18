@@ -879,3 +879,17 @@ p { margin: 0; text-wrap: pretty; }
 .today-list li { display: flex; flex-direction: column; gap: 4px; padding: 16px 0; border-top: 1px solid rgba(25, 22, 18, 0.12); }
 .today-list strong { font-family: var(--serif); font-weight: 400; font-size: 19px; color: var(--ink); }
 .today-list span { font-size: 15px; line-height: 1.5; color: var(--body); }
+
+/* Home: "Build it with us" on the page background, with only the chat example as a dark card */
+#grow { background: none; color: var(--ink); padding: 72px 0 64px; margin-bottom: 0; border-radius: 0; }
+#grow .assistant-eyebrow { color: var(--accent); }
+#grow .assistant-copy { color: var(--body); }
+#grow .assistant-facts { color: var(--body); }
+#grow .assistant-facts li::before { color: var(--accent); }
+#grow .chat { background: var(--ink); border-color: var(--ink); box-shadow: 0 18px 40px rgba(25, 22, 18, 0.12); }
+#grow .chat { color: var(--paper); }
+/* Home: "What ROIN does today" on a soft warm tint with orange accents to break up the page */
+#today { margin: 0 calc(50% - 50vw); padding: 80px calc(50vw - 50%) 84px; background: #E8DFD2; border-top: 0; }
+#today .today-list li { border-top: 2px solid rgba(25, 22, 18, 0.12); position: relative; }
+#today .today-list li::before { content: ""; position: absolute; left: 0; top: -2px; width: 28px; height: 2px; background: var(--accent); }
+#today + .block { border-top: 0; }
